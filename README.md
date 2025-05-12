@@ -70,7 +70,7 @@ http://84.201.148.142:80/
 ![http-codes-vm-2](./images/http-web-vm-2.png)
 
 Zabbix доступен по ссылке:
-http://158.160.150.93:8080/zabbix.php?action=dashboard.view&dashboardid=1
+http://84.201.145.56:8080/zabbix.php?action=dashboard.view&dashboardid=1
 
 ### Логи
 Cоздайте ВМ, разверните на ней Elasticsearch. Установите filebeat в ВМ к веб-серверам, настройте на отправку access.log, error.log nginx в Elasticsearch.
@@ -81,7 +81,7 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 ![kibana-web-vm-2](./images/kibana-web-vm-2.png)
 
 ELK доступен по ссылке:
-http://84.201.151.128:5601/app/discover#/?_g=(filters:!(),query:(language:kuery,query:''),refreshInterval:(pause:!t,value:0),time:(from:now%2Fd,to:now%2Fd))&_a=(columns:!(),filters:!(),index:'filebeat-*',interval:auto,query:(language:kuery,query:''),sort:!(!('@timestamp',desc)))
+http://84.252.133.115:5601/app/discover#/?_g=(filters:!(),query:(language:kuery,query:''),refreshInterval:(pause:!t,value:0),time:(from:now%2Fd,to:now%2Fd))&_a=(columns:!(),filters:!(),index:'filebeat-*',interval:auto,query:(language:kuery,query:''),sort:!(!('@timestamp',desc)))
 
 ### Сеть
 Разверните один VPC. Сервера web, Elasticsearch поместите в приватные подсети. Сервера Zabbix, Kibana, application load balancer определите в публичную подсеть.
